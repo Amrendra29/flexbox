@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: "Montserrat", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #0d1b2a; /* Deep blue background */
+      margin: 0;
+    }
+
+    /* Pricing Container */
+    .pricing-container {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Pricing Plan Styles */
+    .pricing-plan {
+      background: linear-gradient(145deg, #1b263b, #2c3e50);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      width: 300px;
+      border: 2px solid #ffd700; /* Gold border */
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      color: #fff;
+    }
+
+    .pricing-plan:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+    }
+
+    /* Plan Title */
+    .plan-title {
+      font-size: 2.2em;
+      font-family: "Playfair Display", serif;
+      color: #ffd700; /* Gold color */
+      margin-bottom: 15px;
+    }
+
+    /* Price */
+    .plan-price {
+      font-size: 1.8em;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    /* Features */
+    .plan-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 25px 0;
+      font-size: 1.1em;
+    }
+
+    .plan-features li {
+      margin: 10px 0;
+    }
+
+    /* Button */
+    .plan-button {
+      background: linear-gradient(45deg, #ffd700, #ffb700);
+      color: black;
+      padding: 14px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .plan-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #ffd700;
+    }
+
+    /* Glowing Effect */
+    .plan-button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: skewX(-30deg);
+      transition: left 0.4s ease-in-out;
+    }
+
+    .plan-button:hover::after {
+      left: 100%;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .pricing-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 No Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</button>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone & Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</button>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</button>
+    </div>
+  </div>
+
+</body>
+</html>
